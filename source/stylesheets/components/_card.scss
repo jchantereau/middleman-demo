@@ -1,0 +1,50 @@
+.card {
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+  color: white;
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-bg {
+  position: absolute;
+  z-index: 1;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px;
+}
+
+.card-description {
+  z-index: 2;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.card-text {
+  z-index: 2;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+}
+
+.card-user {
+  z-index: 2;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.card-link {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

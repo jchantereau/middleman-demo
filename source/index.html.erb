@@ -1,10 +1,130 @@
 ---
 title: Le Wagon Middleman boilerplate
 ---
+<div class="banner text-align" style="background-image: url('http://unsplash.it/1000/700/?image=0')">
+  <div class="banner-gradient"></div>
+  <div class="banner-content">
+    <h1>Startup tools</h1>
+    <p>Very cool stuff, useful and smart</p>
+    <%= link_to "GET IT", "#", class: "btn btn-primary" %>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      <div class="feature">
+        <h2><%= image_tag "chat.png", class: "img-small"%>Discuss best tools</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="feature">
+        <h2><%= image_tag "mobile.png", class: "img-xs-small"%>Always in sync</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="feature">
+        <h2><h2><%= image_tag "search.png", class: "img-small"%>Power search</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="feature">
+        <h2><h2><%= image_tag "heart.png", class: "img-small"%>Share the love</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Cards -->
+<div class="container">
+  <h2 class="text-align">Most popular</h2>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="card">
+        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')">
+        </span>
+        <span class="card-description">Popular</span>
+        <span class="card-text">
+          <h3>Trello</h3>
+          <p>Very cool stuff, useful and smart</p>
+        </span>
+        <span class="card-user">
+          <%= image_tag "lewagon.png", class: "img-xs-small"%>
+        </span>
+        <a href="#" class="card-link"></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card">
+        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')"></span>
+        <span class="card-description">Popular</span>
+        <span class="card-text">
+          <h3>Trello</h3>
+          <p>Very cool stuff, useful and smart</p>
+        </span>
+        <span class="card-user">
+          <%= image_tag "lewagon.png", class: "img-xs-small"%>
+        </span>
+        <%= link_to "", "#", class: "card-link" %>
+<!--         <a href="#" class="card-link"></a> -->
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="card">
+        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')">
+        </span>
+        <span class="card-description">Popular</span>
+        <span class="card-text">
+          <h3>Trello</h3>
+          <p>Very cool stuff, useful and smart</p>
+        </span>
+        <span class="card-user">
+          <%= image_tag "lewagon.png", class: "img-xs-small"%>
+        </span>
+        <a href="#" class="card-link"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Newsletter -->
+<div class="container">
+  <h2 class="text-align">Get news from us</h2>
+  <p class="text-align">Leave us your mail and get stylus news</p>
+  <div class="row text-align">
+    <form class="form-inline">
+      <label for="exampleInputEmail2"></label>
+      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="bob@gmail.com">
+      <button type="submit" class="btn btn-primary">Surbscribe</button>
+    </form>
+  </div>
+</div>
+<!-- Map -->
+<div id="map" style="width: 100%; height: 400px;"></div>
 
-<div class="welcome text-center padded">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+var myOptions = {
+  zoom: 16,
+  center: myLatlng,
+  scrollwheel: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+};
+
+var map = new google.maps.Map(document.getElementById('map'), myOptions);
+var marker = new google.maps.Marker({
+  position: myLatlng,
+  map: map,
+  title: "You are here!"
+});
+</script>
+<!-- Footer -->
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
