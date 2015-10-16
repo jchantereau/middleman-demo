@@ -9129,14 +9129,13 @@ button.close {
   content: ""; }
 
 /* line 1, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_footer.css.scss */
-.footer {
+#footer {
   background-color: #222222;
   color: #eeeeee;
   padding: 50px 0px;
   margin-top: 50px; }
   /* line 6, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_footer.css.scss */
-  .footer ul {
-    font-size: 25px;
+  #footer a {
     color: #eeeeee; }
 
 /* line 1, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_navbar.css.scss */
