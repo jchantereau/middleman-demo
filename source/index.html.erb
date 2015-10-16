@@ -11,30 +11,14 @@ title: Le Wagon Middleman boilerplate
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-3">
-      <div class="feature">
-        <h2><%= image_tag "chat.png", class: "img-small"%>Discuss best tools</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
+    <% data.features.each do |feature| %>
+      <div class="col-xs-12 col-sm-3">
+        <div class="feature">
+          <h2><%= image_tag feature.image, class: "img-small" %><%= feature.name %></h2>
+          <p><%= feature.description %></p>
+        </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <div class="feature">
-        <h2><%= image_tag "mobile.png", class: "img-xs-small"%>Always in sync</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <div class="feature">
-        <h2><h2><%= image_tag "search.png", class: "img-small"%>Power search</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <div class="feature">
-        <h2><h2><%= image_tag "heart.png", class: "img-small"%>Share the love</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.</p>
-      </div>
-    </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -42,51 +26,23 @@ title: Le Wagon Middleman boilerplate
 <div class="container">
   <h2 class="text-align">Most popular</h2>
   <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <div class="card">
-        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')">
-        </span>
-        <span class="card-description">Popular</span>
-        <span class="card-text">
-          <h3>Trello</h3>
-          <p>Very cool stuff, useful and smart</p>
-        </span>
-        <span class="card-user">
-          <%= image_tag "lewagon.png", class: "img-xs-small"%>
-        </span>
-        <a href="#" class="card-link"></a>
+    <% data.products.each do |product| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <span class="card-bg" style="background-image: url('<%= image_path product.background %>')">
+          </span>
+          <span class="card-description">Popular</span>
+          <span class="card-text">
+            <h3><%= product.name %></h3>
+            <p><%= product.description %></p>
+          </span>
+          <span class="card-user">
+            <%= image_tag product.image, class: "img-xs-small"%>
+          </span>
+          <a href="<%= product.link %>" class="card-link"></a>
+        </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="card">
-        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')"></span>
-        <span class="card-description">Popular</span>
-        <span class="card-text">
-          <h3>Trello</h3>
-          <p>Very cool stuff, useful and smart</p>
-        </span>
-        <span class="card-user">
-          <%= image_tag "lewagon.png", class: "img-xs-small"%>
-        </span>
-        <%= link_to "", "#", class: "card-link" %>
-<!--         <a href="#" class="card-link"></a> -->
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="card">
-        <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')">
-        </span>
-        <span class="card-description">Popular</span>
-        <span class="card-text">
-          <h3>Trello</h3>
-          <p>Very cool stuff, useful and smart</p>
-        </span>
-        <span class="card-user">
-          <%= image_tag "lewagon.png", class: "img-xs-small"%>
-        </span>
-        <a href="#" class="card-link"></a>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <!-- Newsletter -->

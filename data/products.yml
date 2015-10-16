@@ -1,4 +1,17 @@
-- name: Some product
-  image: some_product.png
-- name: Other product
-  image: other_product.png
+- name: Trello
+  background: http://unsplash.it/500/300/?image=0
+  description: Very cool stuff, useful and smart
+  image: lewagon.png
+  link: "#"
+
+- name: Kudoz
+  background: http://unsplash.it/500/300/?image=1
+  description: Very cool stuff, useful and smart
+  image: lewagon.png
+  link: "www.google.fr"
+
+- name: Else
+  background: http://unsplash.it/500/300/?image=2
+  description: Very cool stuff, useful and smart
+  image: lewagon.png
+  link: "#"
