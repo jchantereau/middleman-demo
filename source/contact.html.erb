@@ -2,25 +2,15 @@
   <h2 class="section-header">Our team</h2>
   <br>
   <ul class="list-inline">
-    <li>
-      <img src="http://placehold.it/150x150" class="img-circle" alt="">
-      <h3>Paul</h3>
-    </li>
-    <li>
-      <img src="http://placehold.it/150x150" class="img-circle" alt="">
-      <h3>John</h3>
-    </li>
-    <li>
-      <img src="http://placehold.it/150x150" class="img-circle" alt="">
-      <h3>Ringo</h3>
-    </li>
-    <li>
-      <img src="http://placehold.it/150x150" class="img-circle" alt="">
-      <h3>Georges</h3>
-    </li>
+    <% data.members.each do |member| %>
+      <li>
+        <%= image_tag member.image, class: "img-circle" %>
+        <h3><%= member.name %></h3>
+      </li>
+    <% end %>
   </ul>
 </div>
-<div class="padded-bottom text-center">
+<div class="padded-bottom text-center margin-bottom">
   <h2 class="section-header">Contact us</h2>
   <h3><i class="fa fa-phone"></i> +33 6 42 42 42 42</h3>
   <h3><i class="fa fa-envelope"></i> <a href="mailto:contact@styl.us">contact@styl.us</a></h3>

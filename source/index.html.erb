@@ -1,15 +1,16 @@
 ---
 title: Le Wagon Middleman boilerplate
 ---
-<div class="banner text-align" style="background-image: url('http://unsplash.it/1000/700/?image=0')">
+<div class="banner text-align">
+  <%= image_tag "banner.jpeg", class: "img-cover" %>
   <div class="banner-gradient"></div>
   <div class="banner-content">
-    <h1>Startup tools</h1>
-    <p>Very cool stuff, useful and smart</p>
-    <%= link_to "GET IT", "#", class: "btn btn-primary" %>
+    <h1>House Music</h1>
+    <p>It's a spiritual thing</p>
+    <%= link_to "Drop it", "#", class: "btn btn-danger" %>
   </div>
 </div>
-<div class="container">
+<div class="container fluid">
   <div class="row">
     <% data.features.each do |feature| %>
       <div class="col-xs-12 col-sm-3">

@@ -2,8 +2,9 @@
   background-color: $gray-darker;
   color: $gray-lighter;
   padding: 50px 0px;
-  margin-top: 50px;
   a {
     color: $gray-lighter;
+    &:hover {
+      color: $red;}
   }
 }
