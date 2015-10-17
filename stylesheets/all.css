@@ -9132,11 +9132,13 @@ button.close {
 #footer {
   background-color: #222222;
   color: #eeeeee;
-  padding: 50px 0px;
-  margin-top: 50px; }
-  /* line 6, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_footer.css.scss */
+  padding: 50px 0px; }
+  /* line 5, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_footer.css.scss */
   #footer a {
     color: #eeeeee; }
+    /* line 7, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_footer.css.scss */
+    #footer a:hover {
+      color: #EE5F5B; }
 
 /* line 1, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/layout/_navbar.css.scss */
 .navbar-wagon {
@@ -9401,7 +9403,20 @@ button.close {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  opacity: 0; }
+  /* line 51, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_card.scss */
+  .card-link:hover {
+    opacity: 0.2; }
+
+/* line 56, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_card.scss */
+.card-gradient {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 80%);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
 
 /* line 1, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_image.scss */
 .img-small {
@@ -9410,6 +9425,10 @@ button.close {
 /* line 5, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_image.scss */
 .img-xs-small {
   width: 25px; }
+
+/* line 9, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_image.scss */
+.img-cover {
+  position: absolute; }
 
 /* line 1, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/components/_map.scss */
 #map {
@@ -9422,6 +9441,10 @@ h2 {
   font-weight: bold;
   color: #666666; }
 
+/* line 8, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/pages/_contact.scss */
+.margin-bottom {
+  margin-bottom: 100px; }
+
 /* line 2, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/pages/_home.scss */
 .feature h2 {
   font-size: 17px;
@@ -9432,8 +9455,9 @@ h2 {
 .feature p {
   font-size: 15px;
   color: #B3B3B3;
-  font-weight: 300; }
-/* line 13, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/pages/_home.scss */
+  font-weight: 300;
+  text-align: justify; }
+/* line 14, /Users/julienchantereau/code/jchantereau/middleman-demo/source/stylesheets/pages/_home.scss */
 .feature img {
   margin-right: 5px; }
 
