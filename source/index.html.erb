@@ -2,7 +2,7 @@
 title: Le Wagon Middleman boilerplate
 ---
 <div class="banner text-align">
-  <%= image_tag "banner.jpeg", class: "img-cover" %>
+  <!--%= image_tag "banner.jpeg", class: "img-cover" %-->
   <div class="banner-gradient"></div>
   <div class="banner-content">
     <h1>House Music</h1>
@@ -30,7 +30,7 @@ title: Le Wagon Middleman boilerplate
     <% data.products.each do |product| %>
       <div class="col-xs-12 col-md-4">
         <div class="card">
-          <span class="card-bg" style="background-image: url('<%= image_path product.background %>')">
+          <span class="card-bg card-gradient" style="background-image: url('<%= image_path product.background %>')">
           </span>
           <span class="card-description">Popular</span>
           <span class="card-text">
